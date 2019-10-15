@@ -5,5 +5,7 @@
 
 * Input data
   > login: ssh user+passwd
+  
   > ssid: Tên của wifi acess point
+
   > passphrase: password wifi acess point
