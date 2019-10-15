@@ -5,7 +5,7 @@
     * Setup wifi thông qua mobile-app
     * Nạp thông tin aws iot ca-certificate qua sftp
 
-## 2. Framework
+## 2. Module framework
   * nodejs: [ssh2](https://github.com/mscdex/ssh2)
   * react-native: Module có sẵn trong react-native
 
@@ -50,7 +50,7 @@
 * Restart dhcpcd service
   > systemctl restart dhcpcd
 
-* [example-js](example-js) sử dụng [ssh2](https://github.com/mscdex/ssh2) framework
+* [example-js](example-js) sử dụng [ssh2](https://github.com/mscdex/ssh2) module
 
 3.3 Setup [WPA supplicant](https://wiki.archlinux.org/index.php/WPA_supplicant) (non-admin user)
   * Ưu điểm
