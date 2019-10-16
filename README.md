@@ -14,6 +14,7 @@
   * stdin: input stream thường sử dụng để tryền các argument
   * stdout & stderr: output stream thường sử dụng để ghi log
 
+
 3.2 Linux command exit code
   * exit code == 0: command sucess
   * exit code != 0: command error
