@@ -1,23 +1,33 @@
 # mht-zigbee-ssh
 
-## 1. Mục tiêu
+## <a id='mht-zigbee-ssh-purpose'></a>1. Mục tiêu
   * Sử dụng giao thức ssh để remote zigbee-gateway server
     * Setup wifi thông qua mobile-app
     * Nạp thông tin aws iot ca-certificate qua sftp
 
-## 2. Module framework
+## <a id='mht-zigbee-ssh-module'></a>2. Module framework
   * nodejs: [ssh2](https://github.com/mscdex/ssh2)
   * react-native: Module có sẵn trong react-native
 
-## 3. Setup wifi thông qua ssh
-  3.1 Login
+## <a id='mht-zigbee-ssh-command'></a>3. Linux command
+3.1 Linux command stream
+  * stdin: input stream thường sử dụng để tryền các argument
+  * stdout & stderr: output stream thường sử dụng để ghi log
+
+3.2 Linux command exit code
+  * exit code == 0: command sucess
+  * exit code != 0: command error
+
+
+## <a id='mht-zigbee-ssh-wifi-setup'></a>4. Setup wifi thông qua ssh
+4.1 Login
 
   * ~~Sử dụng user + password~~
-    * test only, khi release cần disable plain text password
+    * testing only, khi release cần disable plain text password
   * Sử dụng public key
     * Sử dụng cho production release
 
-3.2 Setup [WPA supplicant](https://wiki.archlinux.org/index.php/WPA_supplicant) (admin user)
+4.2 Setup [WPA supplicant](https://wiki.archlinux.org/index.php/WPA_supplicant) (admin user)
 
 * Ưu điểm
   * Đơn giản, user nằm trong sudo group có quyền can thiệp hệ thống
@@ -52,7 +62,7 @@
 
 * [example-js](example-js) sử dụng [ssh2](https://github.com/mscdex/ssh2) module
 
-3.3 Setup [WPA supplicant](https://wiki.archlinux.org/index.php/WPA_supplicant) (non-admin user)
+4.3 Setup [WPA supplicant](https://wiki.archlinux.org/index.php/WPA_supplicant) (non-admin user)
   * Ưu điểm
     * User chỉ có quyền giới hạn chỉ nhằm mục đích input config data
   * Nhược điểm
@@ -79,6 +89,6 @@
       done
       ```
 
-3.4 Setup aws iot ca-certificate
+4.4 Setup aws iot ca-certificate
   * TODO
     * sử dụng sftp service để truyền file
