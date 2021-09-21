@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "./index.js",
   "dependencies": {
-    "ssh2": "^0.8.5"
+    "ssh2": "^1.4.0"
   },
   "scripts": {
     "cloud": "node ./src/cloud/App.js",
